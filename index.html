@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO TRADE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Inicio -->
+    <div id="inicio" class="container">
+        <div class="logo">
+            <img src="logo_aplicacion.png" alt="ECO TRADE">
+            <h1>ECO TRADE</h1>
+        </div>
+        <div class="buttons">
+            <button onclick="showSection('login')">Iniciar Sesión</button>
+            <button onclick="showSection('registro')">Registrarse</button>
+        </div>
+    </div>
+
+    <!-- Registro e Inicio de Sesión -->
+    <div id="login" class="hidden">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+            <button type="button" onclick="showSection('inicio')">Volver</button>
+        </form>
+    </div>
+
+    <div id="registro" class="hidden">
+        <h2>Registrarse</h2>
+        <form id="registerForm">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <input type="text" placeholder="Dirección" required>
+            <button type="submit">Registrarse</button>
+            <button type="button" onclick="showSection('inicio')">Volver</button>
+        </form>
+    </div>
+
+    <!-- Página Principal -->
+    <div id="principal" class="hidden">
+        <input type="text" placeholder="Buscar...">
+        <h2>Categorías</h2>
+        <div class="categorias">
+            <button>Plásticos</button>
+            <button>Metales</button>
+            <button>Papel</button>
+            <button>Vidrio</button>
+            <button>Electrónicos</button>
+            <button>Muebles</button>
+            <button>Ropa</button>
+        </div>
+        <h2>Productos Destacados</h2>
+        <div class="productos">
+            <!-- Aquí se agregarán los productos destacados dinámicamente -->
+        </div>
+    </div>
+
+    <!-- Perfil del Usuario -->
+    <div id="perfil" class="hidden">
+        <h2>Perfil del Usuario</h2>
+        <div class="info-personal">
+            <!-- Información personal -->
+        </div>
+        <div class="historial">
+            <!-- Historial de compras y ventas -->
+        </div>
+        <button onclick="showSection('principal')">Volver</button>
+    </div>
+
+    <!-- Página de Producto -->
+    <div id="producto" class="hidden">
+        <h2>Producto</h2>
+        <img src="producto.jpg" alt="Producto">
+        <p>Descripción detallada del producto.</p>
+        <p>Precio: $XX.XX</p>
+        <p>Ubicación del vendedor</p>
+        <button>Añadir al Carrito</button>
+        <button>Contactar al Vendedor</button>
+        <button onclick="showSection('principal')">Volver</button>
+    </div>
+
+    <!-- Carrito de Compras -->
+    <div id="carrito" class="hidden">
+        <h2>Carrito de Compras</h2>
+        <div class="lista-productos">
+            <!-- Lista de productos añadidos al carrito -->
+        </div>
+        <p>Total: $XX.XX</p>
+        <button>Proceder al Pago</button>
+        <button onclick="showSection('principal')">Volver</button>
+    </div>
+
+    <!-- Sistema de Pago -->
+    <div id="pago" class="hidden">
+        <h2>Pago</h2>
+        <form id="paymentForm">
+            <input type="text" placeholder="Número de Tarjeta" required>
+            <input type="text" placeholder="Nombre en la Tarjeta" required>
+            <input type="text" placeholder="Fecha de Expiración" required>
+            <input type="text" placeholder="CVV" required>
+            <button type="submit">Confirmar Pedido</button>
+            <button type="button" onclick="showSection('principal')">Volver</button>
+        </form>
+    </div>
+
+    <!-- Notificaciones -->
+    <div id="notificaciones" class="hidden">
+        <h2>Notificaciones</h2>
+        <!-- Lista de notificaciones -->
+        <button onclick="showSection('principal')">Volver</button>
+    </div>
+
+    <!-- Mensajería -->
+    <div id="mensajeria" class="hidden">
+        <h2>Mensajes</h2>
+        <!-- Chat interno -->
+        <button onclick="showSection('principal')">Volver</button>
+    </div>
+
+    <!-- Soporte y Ayuda -->
+    <div id="soporte" class="hidden">
+        <h2>Soporte y Ayuda</h2>
+        <!-- FAQs y contacto con soporte técnico -->
+        <button onclick="showSection('principal')">Volver</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
